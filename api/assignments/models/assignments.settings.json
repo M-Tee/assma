@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignments",
+  "info": {
+    "name": "Assignments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "deadline": {
+      "type": "datetime"
+    },
+    "max_score": {
+      "type": "integer"
+    },
+    "unit": {
+      "model": "unit",
+      "via": "assignments"
+    }
+  }
+}

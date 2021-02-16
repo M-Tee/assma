@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "Student",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Reg_no": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "student_units": {
+      "collection": "student-units",
+      "via": "student"
+    },
+    "student_assignments": {
+      "collection": "student-assignment",
+      "via": "student"
+    },
+    "Password": {
+      "type": "password"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "name": "Unit"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "unit_id": {
+      "type": "uid"
+    },
+    "unit_name": {
+      "type": "string"
+    },
+    "lecturer": {
+      "via": "units",
+      "model": "lecturers"
+    },
+    "unit_code": {
+      "type": "richtext"
+    },
+    "assignments": {
+      "via": "unit",
+      "collection": "assignments"
+    }
+  }
+}

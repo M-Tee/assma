@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_assignments",
+  "info": {
+    "name": "Student_Assignment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Student_assign_id": {
+      "type": "uid"
+    },
+    "student": {
+      "via": "student_assignments",
+      "model": "student"
+    },
+    "assignments": {
+      "collection": "assignments"
+    },
+    "Score": {
+      "type": "integer"
+    },
+    "Submission_time": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_units",
+  "info": {
+    "name": "Student_Units"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "student_unit_id": {
+      "type": "uid"
+    },
+    "student": {
+      "via": "student_units",
+      "model": "student"
+    },
+    "units": {
+      "collection": "unit"
+    }
+  }
+}

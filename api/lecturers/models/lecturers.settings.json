@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lecturers",
+  "info": {
+    "name": "Lecturers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "lecturer_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "units": {
+      "collection": "unit",
+      "via": "lecturer"
+    }
+  }
+}
